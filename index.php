@@ -2,7 +2,7 @@
 require_once('lib/print.php');
 require_once('view/top.php');
 ?>
-<main>
+<article>
   ☕ <a href="create.php">create</a>
   <?php if (isset($_GET['id'])) {
     ?> 🥛 <a href="update.php?id=<?=$_GET['id']?>">update</a>
@@ -26,9 +26,8 @@ require_once('view/top.php');
       </form>
     </p>
   <?php } ?>
+</article>
 </main>
-</section>
-</div>
 <?php
 require_once('view/bottom.php');
 ?>

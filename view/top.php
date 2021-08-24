@@ -13,16 +13,18 @@ require_once('lib/print.php');
   <link rel="stylesheet" href="css/home.css?v=1.0">
 </head>
 <body>
-  <div class="container">
-    <header>
-      <strong><a class="active" href="index.php">Index ⇠ Forum</a></strong>
-      <p>Open for everyone</p>
-    </header>
-    <section class="content">
-      <nav>
-        <ol>
-          <?php
-          print_list();
-          ?>
-        </ol>
-      </nav>
+  <header>
+    <!--
+    <strong><a class="active" href="/">Index ⇠ Forum</a></strong>
+    -->
+    <strong><a class="active" href="/">SUSTAINABLE☀WEBSITES✿NGO</a></strong>
+    <p>Open for everyone</p>
+  </header>
+  <main>
+    <aside>
+      <ol>
+        <?php
+        print_list();
+        ?>
+      </ol>
+    </aside>
