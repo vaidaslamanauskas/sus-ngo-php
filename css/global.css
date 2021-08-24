@@ -1,0 +1,135 @@
+html {
+  background-color: #507dbc;
+}
+
+body,p {
+  color: #000;
+  font-family: Arial, sans-serif;
+  font-size: 11px;
+  line-height: 15px;
+}
+
+a {
+  text-decoration: underline;
+  color: #000;
+}
+
+a:link {
+  text-decoration: underline;
+  color: #000;
+}
+
+a:visited {
+  text-decoration: none;
+  color: #000;
+}
+
+a:hover {
+  text-decoration: none;
+  color: #000;
+}
+
+a.active {
+  text-decoration: none;
+  color: #000;
+}
+
+.announcement {
+  font-size: $font-size;
+  position: absolute;
+  top: 1.6em;
+  right: 20px;
+  z-index: 1000;
+}
+
+.announcement p {
+  margin: 0!important;
+}
+
+h1 {
+  font-size: 11px;
+  font-weight: 700;
+  margin-top: 0;
+}
+
+ol,ul {
+  list-style: none;
+  padding-left: 0;
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+
+li {
+  font-weight: 400;
+}
+
+#cy {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 999;
+}
+
+.header {
+  position: absolute;
+  left: 10px;
+  top: 10px;
+  z-index: 1000;
+  background-color: transparent;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  margin-top: 10px;
+  margin-left: 2px;
+}
+
+header {
+  left: 10px;
+  top: 10px;
+}
+
+.content {
+  display: flex;
+}
+
+nav {
+  flex-basis: 160px;
+  flex-shrink: 0;
+}
+
+main {
+  margin-left: 60px;
+  width: 500px;
+  margin-top: 0;
+}
+
+.credit {
+  margin-bottom: 20px;
+}
+
+@media(max-width: 600px) {
+  .container {
+    flex-direction: column;
+  }
+
+  nav {
+    flex-basis: 120px;
+    flex-shrink: 0;
+  }
+
+  main {
+    margin-left: 0;
+  }
+}
+
+@media(min-width: 1800px) {
+  main {
+    width:720px;
+  }
+}
+
+/*Glaucous #507DBC, Baby Blue Eyes #A1C6EA, Cultured #EEEEEE*/
