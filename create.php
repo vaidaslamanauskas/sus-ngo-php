@@ -5,6 +5,7 @@ require('view/top.php');
 <article>
 
   <div class="actions">
+    <a href="/">🙊 back</a>
     <a href="create.php">☕ create</a>
   </div>
 
@@ -20,7 +21,6 @@ require('view/top.php');
     </p>
   </form>
 </article>
-</div>
 <?php
 require('view/bottom.php');
 ?>

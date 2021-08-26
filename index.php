@@ -5,10 +5,16 @@ require_once('view/top.php');
 <article>
 
   <div class="actions">
+    <?php if (isset($_GET['id'])) {
+      ?> <a href="/">🙈 back</a>
+    <?php } ?>
+
     <a href="create.php">☕ create</a>
     <?php if (isset($_GET['id'])) {
       ?> <a href="update.php?id=<?=$_GET['id']?>">🥛 update</a>
     <?php } ?>
+
+    <a href="#" id="see-no-evil">🙈 show websites</a>
   </div>
 
   <h1>
@@ -28,6 +34,15 @@ require_once('view/top.php');
       </form>
     </p>
   <?php } ?>
+
+  <!-- Readings -->
+  <section>
+    <ol>
+      <?php
+      print_list();
+      ?>
+    </ol>
+  </section>
 </article>
 </main>
 <?php

@@ -13,20 +13,55 @@ require_once('lib/print.php');
   <link rel="stylesheet" href="css/home.css?v=1.0">
 </head>
 <body>
-  <header>
-    <!--
-    <strong><a class="active" href="/">Index ⇠ Forum</a></strong>
-    -->
-    <strong><a class="active" href="/">SUSTAINABLE✿WEBSITES✿NGO</a></strong>
-    <p>Open for everyone</p>
-
-    <div id="sun"></div>
-  </header>
   <main>
     <aside>
-      <ol>
-        <?php
-        print_list();
-        ?>
-      </ol>
+      <div class="website">
+        <div class="screenshot">
+          <a href="#">
+            <img src="https://www.websites.ngo/images/rememberwhomadethem.com.jpg">
+          </a>
+        </div>
+
+        <p>Remember Who Made Them</p>
+      </div>
+
+      <div class="website">
+        <div class="screenshot">
+          <a href="#">
+            <img src="https://www.websites.ngo/images/rememberwhomadethem.com.jpg">
+          </a>
+        </div>
+
+        <p>Remember Who Made Them</p>
+      </div>
+
+      <div class="website">
+        <div class="screenshot">
+          <a href="#">
+            <img src="https://www.websites.ngo/images/rememberwhomadethem.com.jpg">
+          </a>
+        </div>
+
+        <p>Remember Who Made Them</p>
+      </div>
+
+      <div class="website">
+        <div class="screenshot">
+          <a href="#">
+            <img src="https://www.websites.ngo/images/rememberwhomadethem.com.jpg">
+          </a>
+        </div>
+
+        <p>Remember Who Made Them</p>
+      </div>
+
+      <div class="website">
+        <div class="screenshot">
+          <a href="#">
+            <img src="https://www.websites.ngo/images/rememberwhomadethem.com.jpg">
+          </a>
+        </div>
+
+        <p>Remember Who Made Them</p>
+      </div>
     </aside>
