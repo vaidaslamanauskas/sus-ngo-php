@@ -1,3 +1,7 @@
+:root {
+  --weed: #b3ddb9;
+}
+
 *,
 *::before,
 *::after {
@@ -5,15 +9,15 @@
 }
 
 html {
-  background-color: #507dbc;
+  background-color: var(--weed);
 }
 
 body {
   margin: 0;
-  padding: 0;
+  padding: 15px;
   font-family: Arial, sans-serif;
-  font-size: 11px;
-  line-height: 15px;
+  font-size: 13px;
+  line-height: 17px;
   color: #000;
 }
 
@@ -42,9 +46,8 @@ a:hover {
 }
 
 h1 {
-  font-size: 11px;
-  font-weight: 700;
   margin-top: 0;
+  font-size: 13px;
 }
 
 ol, ul {
@@ -59,8 +62,25 @@ li {
 }
 
 header {
-  left: 10px;
-  top: 10px;
+  position: relative;
+}
+
+#sun {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 150px;
+  height: 100px;
+  background-color: hotpink;
+  border-radius: 50%;
+  transform: translate(-50%, 0);
+  filter: blur(10px);
+  //animation: sun 4s infinite alternate ease-in-out;
+}
+
+@keyframes sun {
+  0% {top: -10%;}
+  100% {top: 28%;}
 }
 
 aside {
@@ -75,9 +95,62 @@ main {
 article {
   margin-left: 60px;
   max-width: 720px;
-  background-color: rebeccapurple;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100vw;
+  height: 200px;
+  background-color: mediumpurple;
+}
+
+footer::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: -60px;
+  left: 0;
+  width: 100vw;
+  height: 60px;
+  background: linear-gradient(
+    rgb(0 0 0 / 0%),
+    rgb(0 0 0 / 100%));
+}
+
+#ocean {
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0) 0% ,
+    #f1cab4 70%,
+    rgba(255, 255, 255, 0) 100%);
+  background-repeat: repeat;
+  background-size: 100% 20%;
+  animation: ocean 100s infinite linear;
+}
+
+@keyframes ocean {
+  0% {background-position:  0 -200%;}
+  100% {background-position:  -400% 0}
 }
 
 .actions {
-  background-color: brown;
+  margin-bottom: 30px;
+  padding-bottom: 15px;
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  border-bottom: 1px dashed black;
+}
+
+.actions a {
+  margin-right: 10px;
+  padding: 4px 7px;
+  text-decoration: none;
+  background-color: transparent;
+  border: 1px solid black;
+  border-radius: 5px;
 }

@@ -6,7 +6,7 @@ require_once('lib/print.php');
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Everybody ⇆ Forum</title>
+  <title>SUSTAINABLE✿WEBSITES✿NGO</title>
   <meta name="description" content="Welcome to Everybody-Forum!">
 
   <link rel="stylesheet" href="css/global.css?v=1.0">
@@ -17,8 +17,10 @@ require_once('lib/print.php');
     <!--
     <strong><a class="active" href="/">Index ⇠ Forum</a></strong>
     -->
-    <strong><a class="active" href="/">SUSTAINABLE☀WEBSITES✿NGO</a></strong>
+    <strong><a class="active" href="/">SUSTAINABLE✿WEBSITES✿NGO</a></strong>
     <p>Open for everyone</p>
+
+    <div id="sun"></div>
   </header>
   <main>
     <aside>
