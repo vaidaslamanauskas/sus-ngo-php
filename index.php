@@ -3,12 +3,14 @@ require_once('lib/print.php');
 require_once('view/top.php');
 ?>
 <article>
-  ☕ <a href="create.php">create</a>
-  <?php if (isset($_GET['id'])) {
-    ?> 🥛 <a href="update.php?id=<?=$_GET['id']?>">update</a>
-  <?php } ?>
 
-  <p></p>
+  <div class="actions">
+    <a href="create.php">☕ create</a>
+    <?php if (isset($_GET['id'])) {
+      ?> <a href="update.php?id=<?=$_GET['id']?>">🥛 update</a>
+    <?php } ?>
+  </div>
+
   <h1>
     <?php
     print_title();

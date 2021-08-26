@@ -2,8 +2,12 @@
 require('lib/print.php');
 require('view/top.php');
 ?>
-<main>
-  ✎ <a href="create.php">create</a>
+<article>
+
+  <div class="actions">
+    <a href="create.php">☕ create</a>
+  </div>
+
   <form action="create_process.php" method="post">
     <p>
       <input type="text" name="title" placeholder="Title">
@@ -15,8 +19,7 @@ require('view/top.php');
       <input type="submit" name="Submit">
     </p>
   </form>
-</main>
-</section>
+</article>
 </div>
 <?php
 require('view/bottom.php');

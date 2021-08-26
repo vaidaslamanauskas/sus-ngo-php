@@ -2,11 +2,15 @@
 require('lib/print.php');
 require('view/top.php');
 ?>
-<main>
-  ✎ <a href="create.php">create</a>
-  <?php if (isset($_GET['id'])) {
-    ?> ✎ <a href="update.php?id=<?=$_GET['id']?>">update</a>
-  <?php } ?>
+<article>
+
+  <div class="actions">
+    <a href="create.php">☕ create</a>
+    <?php if (isset($_GET['id'])) {
+      ?> <a href="update.php?id=<?=$_GET['id']?>">🥛 update</a>
+    <?php } ?>
+  </div>
+
   <form action="update_process.php" method="post">
     <input type="hidden" name="old_title" value="<?=$_GET['id']?>">
     <p>
@@ -19,8 +23,6 @@ require('view/top.php');
       <input type="submit" name="Submit">
     </p>
   </form>
-</main>
-</section>
-</div>
+</article>
 <?php
 require('view/bottom.php');

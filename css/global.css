@@ -1,12 +1,24 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 html {
   background-color: #507dbc;
 }
 
-body,p {
-  color: #000;
+body {
+  margin: 0;
+  padding: 0;
   font-family: Arial, sans-serif;
   font-size: 11px;
   line-height: 15px;
+  color: #000;
+}
+
+img {
+  max-width: 100%;
 }
 
 a {
@@ -29,18 +41,13 @@ a:hover {
   color: #000;
 }
 
-a.active {
-  text-decoration: none;
-  color: #000;
-}
-
 h1 {
   font-size: 11px;
   font-weight: 700;
   margin-top: 0;
 }
 
-ol,ul {
+ol, ul {
   list-style: none;
   padding-left: 0;
   margin-top: 0;
@@ -67,25 +74,10 @@ main {
 
 article {
   margin-left: 60px;
-  width: 500px;
-  margin-top: 0;
+  max-width: 720px;
+  background-color: rebeccapurple;
 }
 
-@media(max-width: 600px) {
-  aside {
-    flex-basis: 120px;
-    flex-shrink: 0;
-  }
-
-  article {
-    margin-left: 0;
-  }
+.actions {
+  background-color: brown;
 }
-
-@media(min-width: 1800px) {
-  article {
-    width:720px;
-  }
-}
-
-/*Glaucous #507DBC, Baby Blue Eyes #A1C6EA, Cultured #EEEEEE*/
