@@ -14,11 +14,11 @@ require('view/top.php');
   <form action="create_process.php" method="post">
     <div>
       <label>Title:</label>
-      <input type="text" name="title" placeholder="Title" required>
+      <input type="text" name="title" placeholder="title" required>
     </div>
     <div>
       <label>Textarea:</label>
-      <textarea rows="15" cols="75" name="description" placeholder="Description" required></textarea>
+      <textarea rows="15" cols="75" name="comment" placeholder="comment" required></textarea>
     </div>
     <div>
       <button type="submit">Submit</button>

@@ -7,7 +7,7 @@ function print_title() {
   }
 }
 
-function print_description() {
+function print_comment() {
   if (isset($_GET['id'])) {
     $basename = basename($_GET['id']);
     echo file_get_contents("data/".$basename);

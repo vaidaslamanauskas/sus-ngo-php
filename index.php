@@ -27,7 +27,7 @@ require_once('view/top.php');
   </header>
 
   <?php
-  print_description();
+  print_comment();
   ?>
   <?php if (isset($_GET['id'])) {
     ?>
