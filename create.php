@@ -12,17 +12,17 @@ require('view/top.php');
 
   <!-- create -->
   <form action="create_process.php" method="post">
-    <div>
+    <fieldset>
       <label>Title:</label>
       <input type="text" name="title" placeholder="title" required>
-    </div>
-    <div>
+    </fieldset>
+    <fieldset>
       <label>Textarea:</label>
       <textarea rows="15" cols="75" name="comment" placeholder="comment" required></textarea>
-    </div>
-    <div>
+    </fieldset>
+    <fieldset>
       <button type="submit">Submit</button>
-    </div>
+    </fieldset>
   </form>
 </article>
 <?php

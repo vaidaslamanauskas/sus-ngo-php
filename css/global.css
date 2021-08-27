@@ -105,28 +105,6 @@ nav #update {
   border-right: 1px solid orangered;
 }
 
-aside {
-  padding: 15px;
-
-  display: grid;
-  grid-template-columns: repeat( auto-fit, minmax(250px, 1fr));
-  gap: 15px;
-  align-content: start;
-
-  max-width: 100px;
-  width: 100%;
-  max-height: 100vh;
-  height: 100vh;
-  overflow-y: auto;
-  background-color: #b3ddb9;
-  transition: all 1s;
-}
-
-aside.see-evil {
-  max-width: 300px;
-  background-color: red;
-}
-
 footer {
   display: block;
   position: fixed;
@@ -192,54 +170,19 @@ footer::before {
   100% {background-position:  -400% 0}
 }
 
-.actions {
-  margin-bottom: 30px;
-  padding-bottom: 15px;
-  display: none;
-  flex-flow: row wrap;
-  align-items: center;
-  border-bottom: 1px dashed black;
-}
-
-.actions a {
-  margin-right: 10px;
-  padding: 4px 7px;
-  text-decoration: none;
-  background-color: transparent;
-  border: 1px solid black;
-  border-radius: 5px;
-}
-
-.website > p {
-  margin-top: 10px;
-  margin-bottom: 0;
-  line-height: 1;
-}
-
-.screenshot a {
-  display: block;
-  border-radius: 12px;
-}
-
-.screenshot a:hover img {
-  filter: grayscale(.7);
-}
-
-.screenshot img {
-  filter: grayscale(1);
-  border-radius: 10px;
-}
-
-form > div {
+form > fieldset {
+  margin: 0;
+  padding: 0;
+  border: none;
   background-color: lightgreen;
 }
 
-form > div > label {
+form > fieldset > label {
   display: block;
   line-height: 1;
 }
 
-form > div > input {
+form > fieldset > input {
   margin: 0;
   padding: 0;
 
@@ -251,15 +194,16 @@ form > div > input {
   border: 1px solid rgb(156, 156, 156);
 }
 
-form > div > textarea {
+form > fieldset > textarea {
   margin: 0;
   padding: 0;
 
   max-width: calc(100vw - 30px);
   width: 699px;
 
-  background-color: white;
   outline: none;
+  vertical-align: middle;
+  background-color: white;
   border: 1px solid rgb(156, 156, 156);
 }
 

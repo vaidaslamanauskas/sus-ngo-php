@@ -17,7 +17,7 @@ require('view/top.php');
       <input type="text" name="title" placeholder="Title" value="<?php print_title(); ?>">
     </p>
     <p>
-      <textarea rows="15" cols="75" name="description" placeholder="Description"><?php print_description(); ?></textarea>
+      <textarea rows="15" cols="75" name="description" placeholder="Description"><?php print_comment(); ?></textarea>
     </p>
     <p>
       <input type="submit" name="Submit">
