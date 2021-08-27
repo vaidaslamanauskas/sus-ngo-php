@@ -4,24 +4,28 @@ require_once('view/top.php');
 ?>
 <article>
 
-  <div class="actions">
+  <nav>
     <?php if (isset($_GET['id'])) {
-      ?> <a href="/">🙈 back</a>
+      ?> <a href="/" id="back"><span id="back-arrow"></span></a>
     <?php } ?>
 
-    <a href="create.php">☕ create</a>
+    <a href="create.php" id="create">☕️ create</a>
+
     <?php if (isset($_GET['id'])) {
-      ?> <a href="update.php?id=<?=$_GET['id']?>">🥛 update</a>
+      ?> <a href="update.php?id=<?=$_GET['id']?>" id="update">🥛 update</a>
     <?php } ?>
 
-    <a href="#" id="see-no-evil">🙈 show websites</a>
-  </div>
+    <a href="#">show websites</a>
+  </nav>
 
-  <h1>
-    <?php
-    print_title();
-    ?>
-  </h1>
+  <header>
+    <h1>
+      <?php
+      print_title();
+      ?>
+    </h1>
+  </header>
+
   <?php
   print_description();
   ?>

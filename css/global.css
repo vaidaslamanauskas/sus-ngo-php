@@ -1,4 +1,5 @@
 :root {
+  --serif: 'Times New Roman', Times, serif;
   --weed: #d6f8db;
   --energy: #a9f768;
 }
@@ -10,12 +11,12 @@
 }
 
 html {
-  background-color: var(--weed);
+  background-color: pink;
 }
 
 body {
   margin: 0;
-  padding: 0;
+  padding: 15px;
 
   min-height: 100vh;
 
@@ -30,17 +31,6 @@ img {
 }
 
 a {
-  text-decoration: underline;
-  color: #000;
-}
-
-a:link {
-  text-decoration: underline;
-  color: #000;
-}
-
-a:visited {
-  text-decoration: none;
   color: #000;
 }
 
@@ -65,13 +55,54 @@ li {
   font-weight: 400;
 }
 
-main {
+nav {
+  position: relative;
   display: flex;
+  flex-flow: row nowrap;
+  flex-grow: 1;
+  overflow: hidden;
+  background-color: goldenrod;
+  border-radius: 12px;
+  box-shadow: 0px 0px 24px -15px rgb(0 0 0 / 42%);
+  -webkit-box-shadow: 0px 0px 24px -15px rgb(0 0 0 / 42%);
 }
 
-article {
-  padding: 15px;
-  width: 100%;
+nav > a {
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-grow: 1;
+  text-decoration: none;
+  text-align: center;
+  color: rgba(255, 255, 255, .678);
+}
+
+nav #back {
+  max-width: max-content;
+  background-image: url(https://leaftree.life/images/clouds-1.jpg);
+  background-size: cover;
+  background-position: center center;
+}
+
+nav #back:hover {
+  filter: brightness(90%);
+}
+
+nav #back-arrow {
+  padding: 0 20px;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background-size: contain;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-image: url(https://leaftree.life/images/back-arrow.svg);
+}
+
+nav #create,
+nav #update {
+  border-right: 1px solid orangered;
 }
 
 aside {
@@ -164,7 +195,7 @@ footer::before {
 .actions {
   margin-bottom: 30px;
   padding-bottom: 15px;
-  display: flex;
+  display: none;
   flex-flow: row wrap;
   align-items: center;
   border-bottom: 1px dashed black;
@@ -196,5 +227,47 @@ footer::before {
 
 .screenshot img {
   filter: grayscale(1);
+  border-radius: 10px;
+}
+
+form > div {
+  background-color: lightgreen;
+}
+
+form > div > label {
+  display: block;
+  line-height: 1;
+}
+
+form > div > input {
+  margin: 0;
+  padding: 0;
+
+  max-width: calc(100vw - 30px);
+  width: 699px;
+
+  background-color: white;
+  outline: none;
+  border: 1px solid rgb(156, 156, 156);
+}
+
+form > div > textarea {
+  margin: 0;
+  padding: 0;
+
+  max-width: calc(100vw - 30px);
+  width: 699px;
+
+  background-color: white;
+  outline: none;
+  border: 1px solid rgb(156, 156, 156);
+}
+
+form > div > button {
+  margin: 0;
+  padding: 4px 8px 4px;
+  background: #fff;
+  outline: none;
+  border: 1px solid rgb(156, 156, 156);
   border-radius: 10px;
 }
