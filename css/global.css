@@ -10,20 +10,24 @@
   box-sizing: border-box;
 }
 
+html, body {
+  min-height: 100vh;
+}
+
 html {
-  background-color: pink;
+  font-size: 21px;
+  background-color: white;
 }
 
 body {
   margin: 0;
   padding: 15px;
 
-  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 
-  font-family: Arial, sans-serif;
-  font-size: 13px;
-  line-height: 17px;
-  color: #000;
+  font-family: var(--serif);
+  color: black;
 }
 
 img {
@@ -35,13 +39,16 @@ a {
 }
 
 a:hover {
-  text-decoration: none;
-  color: #000;
+  text-decoration: underline;
 }
 
 h1 {
   margin-top: 0;
-  font-size: 13px;
+  margin-bottom: 0;
+  font-size: 21px;
+  font-weight: normal;
+  font-style: italic;
+  line-height: 1;
 }
 
 ol, ul {
@@ -56,15 +63,15 @@ li {
 }
 
 nav {
-  position: relative;
+  margin-bottom: 30px;
+  position: sticky;
+  top: 0;
   display: flex;
   flex-flow: row nowrap;
   flex-grow: 1;
   overflow: hidden;
-  background-color: goldenrod;
+  background-color: white;
   border-radius: 12px;
-  box-shadow: 0px 0px 24px -15px rgb(0 0 0 / 42%);
-  -webkit-box-shadow: 0px 0px 24px -15px rgb(0 0 0 / 42%);
 }
 
 nav > a {
@@ -73,9 +80,16 @@ nav > a {
   align-items: center;
   justify-content: center;
   flex-grow: 1;
+  font-style: italic;
   text-decoration: none;
   text-align: center;
-  color: rgba(255, 255, 255, .678);
+  color: black;
+  background-color: rgb(0 0 0 / 9%);
+}
+
+nav > a:hover {
+  text-decoration: none;
+  opacity: .8;
 }
 
 nav #back {
@@ -97,36 +111,111 @@ nav #back-arrow {
   background-size: contain;
   background-position: center center;
   background-repeat: no-repeat;
-  background-image: url(https://leaftree.life/images/back-arrow.svg);
+  background-image: url(../images/back-arrow.svg);
 }
 
-nav #create,
+nav #websites {
+  max-width: max-content;
+  //background-image: url(https://leaftree.life/images/clouds-1.jpg);
+  background-color: #201d8c;
+  background-size: cover;
+  background-position: center center;
+}
+
+nav #websites:hover {
+  filter: brightness(90%);
+}
+
+nav #forward-arrow {
+  padding: 0 20px;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background-size: contain;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-image: url(../images/forward-arrow.svg);
+}
+
 nav #update {
-  border-right: 1px solid orangered;
+  border-left: 1px solid white;
+}
+
+main {
+  flex: 1 0 auto;
+}
+
+aside {
+  margin-top: 30px;
+  background-color: white;
+}
+
+aside > ol li a {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  border-top: 2px solid #e5e5e5;
+}
+
+aside > ol li:last-of-type > a {
+  border-bottom: 2px solid #e5e5e5;
+}
+
+aside > ol li a::after {
+  content: '';
+  margin-left: auto;
+  width: 0;
+  height: 0;
+  border-left: 9px solid transparent;
+  border-right: 9px solid transparent;
+  border-top: 9px solid #000;
+  display: block;
+  transform: rotate(90deg);
+}
+
+aside > ol li a:hover {
+  text-decoration: none;
 }
 
 footer {
-  display: block;
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  width: 100vw;
-  height: 20vh;
+  flex-shrink: 0;
+  margin-top: auto;
+  padding-top: 15px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-items: space-between;
+
   background-color: #e7c581;
+  border-top: 1px dashed black;
 }
 
-footer::before {
-  content: "";
+@media (max-width: 800px) {
+  footer {
+    display: block;
+  }
+}
+
+footer > p {
+  margin-top: 0;
+  margin-bottom: 0;
   display: block;
-  position: absolute;
-  top: -60px;
-  left: 0;
-  width: 100vw;
-  height: 60px;
-  pointer-events: none;
-  background: linear-gradient(
-    rgb(214 248 219 / 0%),
-    rgb(214 248 219 / 100%));
+  background-color: chocolate;
+}
+
+footer > p:nth-of-type(2) {
+  grid-column-start: 3;
+}
+
+footer > p:nth-of-type(3) {
+  margin-top: 30px;
+  grid-column-start: 1;
+  grid-column-end: 4;
+}
+
+footer > p:nth-of-type(3) a {
+  font-style: italic;
 }
 
 #sun {
@@ -152,29 +241,15 @@ footer::before {
   }
 }
 
-#ocean {
-  height: 100%;
-  width: 100%;
-  background: linear-gradient(
-    to bottom,
-    rgba(255, 255, 255, 1) 0% ,
-    rgb(179 221 185) 65%,
-    rgba(255, 255, 255, 1) 100%);
-  background-repeat: repeat;
-  background-size: 100% 20%;
-  animation: ocean 100s infinite linear;
-}
-
-@keyframes ocean {
-  0% {background-position:  0 -200%;}
-  100% {background-position:  -400% 0}
-}
-
 form > fieldset {
   margin: 0;
   padding: 0;
   border: none;
   background-color: lightgreen;
+}
+
+form > fieldset + fieldset {
+  margin-top: 11px;
 }
 
 form > fieldset > label {
@@ -184,34 +259,62 @@ form > fieldset > label {
 
 form > fieldset > input {
   margin: 0;
-  padding: 0;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 8px;
+  padding-right: 8px;
 
   max-width: calc(100vw - 30px);
   width: 699px;
 
+  font-family: inherit;
+  font-size: inherit;
   background-color: white;
   outline: none;
   border: 1px solid rgb(156, 156, 156);
+  border-radius: 10px;
 }
 
 form > fieldset > textarea {
   margin: 0;
-  padding: 0;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 8px;
+  padding-right: 8px;
 
   max-width: calc(100vw - 30px);
   width: 699px;
 
+  font-family: inherit;
+  font-size: inherit;
   outline: none;
   vertical-align: middle;
   background-color: white;
   border: 1px solid rgb(156, 156, 156);
+  border-radius: 10px;
 }
 
-form > div > button {
+form > fieldset > small {
+  display: block;
+  font-size: 21px;
+  line-height: 1;
+}
+
+form > fieldset > button {
   margin: 0;
-  padding: 4px 8px 4px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 8px;
+  padding-right: 8px;
   background: #fff;
   outline: none;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: inherit;
   border: 1px solid rgb(156, 156, 156);
   border-radius: 10px;
+}
+
+form > fieldset > button:hover {
+  border: 1px solid rgb(0, 0, 0);
 }

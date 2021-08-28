@@ -9,13 +9,13 @@ require_once('view/top.php');
       ?> <a href="/" id="back"><span id="back-arrow"></span></a>
     <?php } ?>
 
-    <a href="create.php" id="create">☕️ create</a>
+    <a href="create.php" id="create">🪴 create</a>
 
     <?php if (isset($_GET['id'])) {
-      ?> <a href="update.php?id=<?=$_GET['id']?>" id="update">🥛 update</a>
+      ?> <a href="update.php?id=<?=$_GET['id']?>" id="update">🙈 update</a>
     <?php } ?>
 
-    <a href="#">show websites</a>
+    <a href="#" id="websites"><span id="forward-arrow"></span></a>
   </nav>
 
   <header>
@@ -38,16 +38,16 @@ require_once('view/top.php');
       </form>
     </p>
   <?php } ?>
-
-  <!-- Readings -->
-  <section>
-    <ol>
-      <?php
-      print_list();
-      ?>
-    </ol>
-  </section>
 </article>
+
+<!-- readings -->
+<aside>
+  <ol>
+    <?php
+    print_list();
+    ?>
+  </ol>
+</aside>
 </main>
 <?php
 require_once('view/bottom.php');
